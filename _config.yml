@@ -14,3 +14,7 @@ markdown: kramdown
 
 # see http://melandri.net/2013/11/24/manage-posts-excerpt-in-jekyll/
 excerpt_separator: <!--more-->
+
+collections:
+  recipes:
+    output: true

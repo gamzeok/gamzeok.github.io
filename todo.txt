@@ -1,0 +1,2 @@
+* Facebook comments instead of Disqus
+* Update Google Analytics

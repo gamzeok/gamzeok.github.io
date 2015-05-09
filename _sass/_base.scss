@@ -8,8 +8,6 @@ dl, dd, ol, ul, figure {
     padding: 0;
 }
 
-
-
 /**
  * Basic styling
  */
@@ -17,13 +15,11 @@ body {
     font-family: $base-font-family;
     font-size: $base-font-size;
     line-height: $base-line-height;
-    font-weight: 300;
+    font-weight: $base-font-weight;
     color: $text-color;
     background-color: $background-color;
     -webkit-text-size-adjust: 100%;
 }
-
-
 
 /**
  * Set `margin-bottom` to maintain vertical rhythm
@@ -35,8 +31,6 @@ ul, ol, dl, figure,
     margin-bottom: $spacing-unit / 2;
 }
 
-
-
 /**
  * Images
  */
@@ -44,8 +38,6 @@ img {
     max-width: 100%;
     vertical-align: middle;
 }
-
-
 
 /**
  * Figures
@@ -58,8 +50,6 @@ figcaption {
     font-size: $small-font-size;
 }
 
-
-
 /**
  * Lists
  */
@@ -70,20 +60,20 @@ ul, ol {
 li {
     > ul,
     > ol {
-         margin-bottom: 0;
+        margin-bottom: 0;
     }
 }
-
-
 
 /**
  * Headings
  */
-h1, h2, h3, h4, h5, h6 {
-    font-weight: 300;
+h1 {
+    font-weight: $base-font-weight;
 }
 
-
+h2, h3, h4, h5, h6 {
+    font-weight: $base-font-weight-bold;
+}
 
 /**
  * Links
@@ -102,8 +92,6 @@ a {
     }
 }
 
-
-
 /**
  * Blockquotes
  */
@@ -119,8 +107,6 @@ blockquote {
         margin-bottom: 0;
     }
 }
-
-
 
 /**
  * Code formatting
@@ -148,14 +134,12 @@ pre {
     }
 }
 
-
-
 /**
  * Wrapper
  */
 .wrapper {
-    max-width: -webkit-calc(#{$content-width} - (#{$spacing-unit} * 2));
-    max-width:         calc(#{$content-width} - (#{$spacing-unit} * 2));
+    max-width: -webkit-calc(#{$laptop-site-width} - (#{$spacing-unit} * 2));
+    max-width: calc(#{$laptop-site-width} - (#{$spacing-unit} * 2));
     margin-right: auto;
     margin-left: auto;
     padding-right: $spacing-unit;
@@ -163,14 +147,12 @@ pre {
     @extend %clearfix;
 
     @include media-query($on-laptop) {
-        max-width: -webkit-calc(#{$content-width} - (#{$spacing-unit}));
-        max-width:         calc(#{$content-width} - (#{$spacing-unit}));
+        max-width: -webkit-calc(#{$laptop-site-width} - (#{$spacing-unit}));
+        max-width: calc(#{$laptop-site-width} - (#{$spacing-unit}));
         padding-right: $spacing-unit / 2;
         padding-left: $spacing-unit / 2;
     }
 }
-
-
 
 /**
  * Clearfix
@@ -183,8 +165,6 @@ pre {
         clear: both;
     }
 }
-
-
 
 /**
  * Icons
@@ -200,5 +180,86 @@ pre {
         path {
             fill: $grey-color;
         }
+    }
+}
+
+/**
+ * Based from Bootstrap .label
+*/
+.big-link-wrapper {
+    display: block;
+    text-align: center;
+    margin-bottom: $spacing-unit * 2;
+}
+
+.big-link {
+    display: inline;
+    padding: .2em .6em .3em;
+    font-size: 150%;
+    font-weight: 700;
+    line-height: 1;
+    color: #fff;
+    background-color: lighten($brand-color, 10%);
+    text-align: center;
+    white-space: nowrap;
+    vertical-align: baseline;
+    border-radius: .25em;
+
+    &:visited {
+        color: #fff;
+        background-color: lighten($brand-color, 10%);
+    }
+    &:hover {
+        color: #fff;
+        background-color: lighten($brand-color, 10%);
+    }
+}
+
+/** Based from Bootstrap dl-horizontal **/
+dl {
+    margin-top: 0;
+    margin-bottom: 20px;
+}
+
+dt, dd {
+    line-height: 1.5;
+}
+
+dt {
+    float: left;
+    width: 160px;
+    overflow: hidden;
+    clear: left;
+    text-align: right;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    font-weight: 500;
+}
+
+dd {
+    margin-left: 180px;
+}
+
+@include media-query($on-palm) {
+    dt {
+        float: initial;
+        width: initial;
+        overflow: initial;
+        clear: initial;
+        text-align: initial;
+        text-overflow: initial;
+        white-space: initial;
+    }
+
+    dd {
+        margin-left: initial;
+    }
+}
+
+//make CodePen demos narrower
+.codepen-mobile {
+    iframe[src*="codepen.io"] {
+        //height must be passed to embed code!
+        width: 320px !important;
     }
 }
