@@ -13,9 +13,9 @@ layout: default
 
         <h2>
           <a class="post-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
-          <!--using the idea from http://melandri.net/2013/11/24/manage-posts-excerpt-in-jekyll/-->
-          <p>{{ post.content | split:'<!--more-->' | first }}</p>
         </h2>
+        <!--using the idea from http://melandri.net/2013/11/24/manage-posts-excerpt-in-jekyll/-->
+        <p>{{ post.content | split:'<!--more-->' | first }}</p>
       </li>
     {% endfor %}
   </ul>
