@@ -458,3 +458,14 @@ body.with-banner {
     margin-top: $spacing-unit;
     padding-top: $spacing-unit;
 }
+
+.recipe-summary-table{
+    i.fa{
+        color: $brand-color;
+    }
+
+    .recipe-summary-item{
+        padding-right: $spacing-unit/5;
+        display: inline-block;
+    }
+}
