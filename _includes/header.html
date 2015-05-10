@@ -17,19 +17,13 @@
             </a>
 
             <div class="trigger">
-                <!--Three static htmls-->
-                <a class="page-link" href="{{ '/projects.html' | prepend: site.baseurl }}">Projects</a>
-                <a class="page-link" href="{{ '/techposts.html' | prepend: site.baseurl }}">Tech</a>
-                <a class="page-link" href="{{ '/miscposts.html' | prepend: site.baseurl }}">Misc</a>
-                <a class="page-link" href="http://personalnotes.aliok.com.tr/">Notes</a>
-
-
                 <!--md files picked up by Jekyll-->
                 {% for page in site.pages %}
                 {% if page.title %}
                 <a class="page-link" href="{{ page.url | prepend: site.baseurl }}">{{ page.title }}</a>
                 {% endif %}
                 {% endfor %}
+                <a class="page-link" href="{{ "/feed.xml" | prepend: site.baseurl }}">Subscribe</a>
             </div>
         </nav>
 

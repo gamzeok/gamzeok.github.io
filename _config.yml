@@ -1,6 +1,5 @@
 # Site settings
 title: Turkish Cuisine
-email: gamzeeren@gmail.com
 description: > # this means to ignore newlines until "baseurl:"
   *Turkish Cuisine* is a project to introduce Turkish kitchen to people all around the world. All content is
   licensed under [Creative Commons Attribution-NonCommercial 4.0 International License](http://creativecommons.org/licenses/by-nc/4.0/).

@@ -13,6 +13,24 @@ Mücver is a Turkish fritter, similar to a pancake made from grated squash, cour
 
 <!--more-->
 
+# Terms
+
+Exotic
+: 3/5 
+
+word spotting
+: "retrieve similar words in the image document through an image query"
+
+fluctuation
+: see baseline fluctuation below.
+
+superfluous information
+: non textual elements, textual elements from the verso (other side of the page)
+
+verso
+: other side of the page
+
+
 To add new posts, simply add a file in the `_posts` directory that follows the convention `YYYY-MM-DD-name-of-post.ext` and includes the necessary front matter. Take a look at the source for this post to get an idea about how it works.
 
 
